@@ -798,7 +798,7 @@ class SymfonyRequirements extends RequirementCollection
         $composerLock = json_decode(file_get_contents($path), true);
         foreach ($composerLock['packages'] as $package) {
             $name = $package['name'];
-            if ('symfony/symfony' !== $name && 'symfony/http-kernel' !== $name) {
+            if ('oldpak/symfony' !== $name && 'symfony/http-kernel' !== $name) {
                 continue;
             }
 

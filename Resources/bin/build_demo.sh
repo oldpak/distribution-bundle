@@ -33,7 +33,7 @@ rm -rf /tmp/Symfony
 mkdir /tmp/Symfony
 
 # Clone demo application and install its dependencies
-git clone https://github.com/symfony/symfony-demo /tmp/Symfony
+git clone https://github.com/oldpak/symfony-demo /tmp/Symfony
 cd /tmp/Symfony
 composer install --prefer-dist --no-interaction --ignore-platform-reqs --no-plugins --optimize-autoloader
 
@@ -75,7 +75,7 @@ cd $TARGET/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle && rm -rf phpun
 cd $TARGET/swiftmailer/swiftmailer && rm -rf CHANGES README* build* docs notes test-suite tests create_pear_package.php package*
 
 # Symfony
-cd $TARGET/symfony/symfony && rm -rf README.md phpunit.xml* tests *.sh vendor
+cd $TARGET/oldpak/symfony && rm -rf README.md phpunit.xml* tests *.sh vendor
 
 if [ -d $TARGET/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle ]; then
     cd $TARGET/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle && rm -rf Tests Resources/doc
