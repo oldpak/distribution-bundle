@@ -52,7 +52,7 @@ rm -rf app/cache/* app/logs/* var/cache/* var/logs/*
 chmod 777 app/cache app/logs var/cache var/logs
 find . -name .DS_Store | xargs rm -rf -
 
-VERSION=`grep ' VERSION ' vendor/oldpak/symfony/src/Symfony/Component/HttpKernel/Kernel.php | sed -E "s/.*'(.+)'.*/\1/g"`
+VERSION=`grep ' VERSION ' vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php | sed -E "s/.*'(.+)'.*/\1/g"`
 
 # With vendors
 cd /tmp/Symfony
@@ -97,7 +97,7 @@ fi
 cd $TARGET/swiftmailer/swiftmailer && rm -rf CHANGES README* build* docs notes test-suite tests create_pear_package.php package*
 
 # Symfony
-cd $TARGET/oldpak/symfony && rm -rf README.md phpunit.xml* tests *.sh vendor
+cd $TARGET/symfony/symfony && rm -rf README.md phpunit.xml* tests *.sh vendor
 
 if [ -d $TARGET/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle ]; then
     cd $TARGET/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle && rm -rf Tests Resources/doc
